@@ -47,7 +47,7 @@ configuration_options = {
     {
         name = "WormholeGrass",
         label = "Wormhole Grass Count",
-        options = numerical_options(20),
+        options = numerical_options(20, 0, 2),
         default = 8,
         hover = "Number of Wormhole Grass to generate in the forest (surface)"
     },
