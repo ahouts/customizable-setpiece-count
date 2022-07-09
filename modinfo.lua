@@ -132,14 +132,14 @@ configuration_options = {
         name = "TentaclePillar",
         label = "Tentacle Pillar Count",
         options = numerical_options(20, 1, 2),
-        default = 1,
+        default = 11,
         hover = "Number of Tentacle Pillars to generate in the caves"
     },
     {
         name = "CavesResurrectionStone",
         label = "Touch Stone Count (Caves)",
         options = numerical_options(20),
-        default = 1,
+        default = 2,
         hover = "Number of Touch Stones to generate in the caves"
     },
 }
