@@ -1,5 +1,5 @@
-name = "Customizable Setpiece Counts"
-description = "Gives YOU control over the number of setpieces in YOUR world!"
+name = "Extra Worldgen Customization Options"
+description = "Allows you to customize various fixed assets in the world."
 author = "LazyTitan"
 version = "0.1.0"
 
@@ -32,114 +32,114 @@ end
 configuration_options = {
     {
         name = "ForestOptionalTasks",
-        label = "Forest Optional Task Count",
+        label = "Extra Forest Biomes",
         options = numerical_options(20),
         default = 5,
-        hover = "Number of optional forest (surface) tasks to generate"
+        hover = "Number of Extra Forest Biomes to generate"
     },
     {
         name = "ResurrectionStone",
-        label = "Resurrection Stone Count",
+        label = "Touch Stones",
         options = numerical_options(20),
         default = 2,
-        hover = "Number of Resurrection Stones to generate in the forest (surface)"
+        hover = "Number of Touch Stones to generate on the surface"
     },
     {
         name = "WormholeGrass",
-        label = "Wormhole Grass Count",
+        label = "Wormholes",
         options = numerical_options(20, 0, 2),
         default = 8,
-        hover = "Number of Wormhole Grass to generate in the forest (surface)"
+        hover = "The number of Wormholes in that generate on the surface."
     },
     {
         name = "MooseNest",
-        label = "Moose Nets Count",
+        label = "Moose/Goose Nets",
         options = numerical_options(20),
         default = 9,
-        hover = "Number of Moose Nests to generate in the forest (surface)"
+        hover = "Number of Moose/Goose Nests to generate on the surface."
     },
     {
         name = "MoonAltarRockGlass",
-        label = "Moon Altar Rock Glass Count",
+        label = "Celestial Altar Base",
         options = numerical_options(20),
         default = 1,
-        hover = "Number of Moon Altar Rock Glass to generate in the forest (surface)"
+        hover = "Minimum 1 to fight Celestial Guardian",
     },
     {
         name = "MoonAltarRockIdol",
-        label = "Moon Altar Rock Idol Count",
+        label = "Celestial Altar Idol",
         options = numerical_options(20),
         default = 1,
-        hover = "Number of Moon Altar Rock Idol to generate in the forest (surface)"
+        hover = "Minimum 1 to fight Celestial Guardian"
     },
     {
         name = "MoonAltarRockSeed",
-        label = "Moon Altar Rock Seed Count",
+        label = "Celestial Altar Orb",
         options = numerical_options(20),
         default = 1,
-        hover = "Number of Moon Altar Rock Seed to generate in the forest (surface)"
+        hover = "Minimum 1 to fight Celestial Guardian"
     },
     {
         name = "BathbombedHotspring",
-        label = "Bathbombed Hotspring Count",
+        label = "Bath Bomb Set Piece",
         options = numerical_options(20),
         default = 1,
-        hover = "Number of Bathbombed Hotsprings to generate in the forest (surface)"
+        hover = "The number of Bath Bomb set pieces to spawn on the Lunar Island"
     },
     {
         name = "MoonFissures",
-        label = "Moon Fissure Count",
+        label = "Celestial Fissure Triangle",
         options = numerical_options(20),
         default = 1,
-        hover = "Number of Moon Fissures to generate in the forest (surface)"
+        hover = "Minimum 1 to fight Celestial Guardian"
     },
     {
         name = "BrinePool1",
-        label = "Brine Pool 1 Count",
+        label = "Small Salt Biome",
         options = numerical_options(20),
         default = 4,
-        hover = "Number of Brine Pool 1 to generate in the forest (surface)"
+        hover = "Number of Small Salt Biomes (10 Salt Stacks) generate in the ocean"
     },
     {
         name = "BrinePool2",
-        label = "Brine Pool 2 Count",
+        label = "Large Ladle Salt Biome",
         options = numerical_options(20),
         default = 2,
-        hover = "Number of Brine Pool 2 to generate in the forest (surface)"
+        hover = "Number of Large Ladle Salt Biomes (22 Salt Stacks) generate in the ocean"
     },
     {
         name = "BrinePool3",
-        label = "Brine Pool 3 Count",
+        label = "Medium Helix Salt Biome",
         options = numerical_options(20),
         default = 2,
-        hover = "Number of Brine Pool 3 to generate in the forest (surface)"
+        hover = "Number of Medium Helix Salt Biome (19 Salt Stacks) generate in the ocean"
     },
     {
         name = "Waterlogged1",
-        label = "Waterlogged 1 Count",
+        label = "Waterlogged Biome",
         options = numerical_options(20),
         default = 3,
-        hover = "Number of Waterlogged 1 to generate in the forest (surface)"
+        hover = "Number of Waterlogged Biomes to spawn in the ocean"
     },
     {
         name = "CavesOptionalTasks",
-        label = "Cave Optional Task Count",
+        label = "Extra Cave Biomes",
         options = numerical_options(20),
         default = 8,
-        hover = "Number of optional cave tasks to generate"
+        hover = "Number of Extra Cave Biomes to generate"
     },
     {
         name = "TentaclePillar",
-        label = "Moon Fissure Count",
+        label = "Tentacle Pillar Count",
         options = numerical_options(20, 1, 2),
         default = 1,
-        hover = "Number of Moon Fissures to generate in the caves"
+        hover = "Number of Tentacle Pillars to generate in the caves"
     },
     {
         name = "CavesResurrectionStone",
-        label = "Resurrection Stone Count (Caves)",
+        label = "Touch Stone Count (Caves)",
         options = numerical_options(20),
         default = 1,
-        hover = "Number of Resurrection Stones to generate in the caves"
+        hover = "Number of Touch Stones to generate in the caves"
     },
 }

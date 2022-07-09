@@ -18,6 +18,55 @@ local opts = {
 }
 
 AddTaskSetPreInitAny(function(taskset)
+    local util = require("dst-util/util")(GLOBAL)
+    local type = require("dst-util/type")(util)
+
+    local known_taskset = type.Union(
+            type.Table({ location = "forest" }),
+            type.Table({ location = "caves" })
+    )
+    if not type.type_check(known_taskset, taskset) then
+        util.modprint("unknown taskset location:", util.access(taskset, "location"))
+        return
+    end
+
+    local taskset_type_forest = type.Table({
+        location = "forest",
+        numoptionaltasks = type.Number(),
+        set_pieces = type.Table({
+            ResurrectionStone = type.Table({ count = type.Number() }),
+            WormholeGrass = type.Table({ count = type.Number() }),
+            MooseNest = type.Table({ count = type.Number() }),
+            MoonAltarRockGlass = type.Table({ count = type.Number() }),
+            MoonAltarRockIdol = type.Table({ count = type.Number() }),
+            MoonAltarRockSeed = type.Table({ count = type.Number() }),
+            BathbombedHotspring = type.Table({ count = type.Number() }),
+            MoonFissures = type.Table({ count = type.Number() }),
+        }),
+        ocean_prefill_setpieces = type.Table({
+            BrinePool1 = type.Table({ count = type.Number() }),
+            BrinePool2 = type.Table({ count = type.Number() }),
+            BrinePool3 = type.Table({ count = type.Number() }),
+            Waterlogged1 = type.Table({ count = type.Number() }),
+        }),
+    })
+    local taskset_type_caves = type.Table({
+        location = "caves",
+        numoptionaltasks = type.Number(),
+        set_pieces = type.Table({
+            TentaclePillar = type.Table({ count = type.Number() }),
+            ResurrectionStone = type.Table({ count = type.Number() }),
+        }),
+    })
+    local any_known_taskset = type.Union(taskset_type_forest, taskset_type_caves)
+
+    if not type.type_check(any_known_taskset, taskset) then
+        util.modprint(any_known_taskset.describe())
+        util.display(taskset)
+        util.error("implementation of taskset feature count changed, contact mod author!")
+        return
+    end
+
     if taskset.location == "forest" then
         taskset.numoptionaltasks = opts.ForestOptionalTasks
         taskset.set_pieces.ResurrectionStone.count = opts.ResurrectionStone
@@ -36,5 +85,7 @@ AddTaskSetPreInitAny(function(taskset)
         taskset.numoptionaltasks = opts.CavesOptionalTasks
         taskset.set_pieces.TentaclePillar.count = opts.TentaclePillar
         taskset.set_pieces.ResurrectionStone.count = opts.CavesResurrectionStone
+    else
+        util.error("implementation bug in mod, contact mod author!")
     end
 end)
