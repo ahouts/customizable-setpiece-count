@@ -1,7 +1,7 @@
 name = "Extra Worldgen Customization Options"
 description = "Allows you to customize various fixed assets in the world."
 author = "LazyTitan"
-version = "0.1.0"
+version = "0.1.1"
 
 api_version = 10
 dst_compatible = true
@@ -15,7 +15,8 @@ icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 
 server_filter_tags = {
-    "tweak"
+    "tweak",
+    "worldgen",
 }
 
 local function numerical_options(n, offset, increment)
