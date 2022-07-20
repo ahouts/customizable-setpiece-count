@@ -1,7 +1,7 @@
 name = "Extra Worldgen Customization Options"
 description = "Allows you to customize various fixed assets in the world."
 author = "LazyTitan"
-version = "0.1.1"
+version = "0.1.2"
 
 api_version = 10
 dst_compatible = true

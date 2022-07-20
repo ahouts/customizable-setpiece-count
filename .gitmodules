@@ -1,3 +1,6 @@
 [submodule "scripts/dst-util"]
 	path = scripts/dst-util
 	url = git@github.com:ahouts/dst-util.git
+[submodule "scripts/extra-worldgen-customization-options/dst-util"]
+	path = scripts/extra-worldgen-customization-options/dst-util
+	url = git@github.com:ahouts/dst-util.git

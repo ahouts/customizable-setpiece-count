@@ -18,8 +18,8 @@ local opts = {
 }
 
 AddTaskSetPreInitAny(function(taskset)
-    local util = require("dst-util/util")(GLOBAL)
-    local type = require("dst-util/type")(util)
+    local util = require("extra-worldgen-customization-options/dst-util/util")(GLOBAL)
+    local type = require("extra-worldgen-customization-options/dst-util/type")(util)
 
     local known_taskset = type.Union(
             type.Table({ location = "forest" }),
